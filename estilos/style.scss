@@ -1,24 +1,42 @@
 @charset "UTF-8";
-
 /*Mapas y Variables*/
+
+$coloresPrincipales: (
+  borde:rgb(233, 192, 9),
+  fondoGris:rgb(83, 83, 82),
+  fondoBoton:red,
+);
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Castoro Titling', cursive;
+}
+body{
+  background-image: url('https://img.freepik.com/foto-gratis/marco-ingredientes-alimentarios-hornear-sobre-fondo-pastel-ligeramente-rosa-cocinar-plano-espacio-copia-vista-superior-concepto-horneado-endecha-plana_127032-2200.jpg?w=2000');
+  object-fit: cover;
+  background-size: cover;
+
 }
 
-body {
-  background-color: rgb(206, 121, 90);
-}
 
+ /*background-color: rgb(206, 121, 90);*/
 /*Header*/
+
 .container {
-  border-bottom: 3px solid rgb(233, 192, 9);
+  border-bottom: 3px solid map-get($coloresPrincipales , borde );
   background-color: rgb(83, 83, 82);
   display: flex;
   height: 180px;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .logo {
@@ -50,9 +68,10 @@ body {
 }
 
 .titulo-principal {
-  text-decoration: underline;
+  
   color: white;
   font-size: 60px;
+  
 }
 
 /*Responsive header*/
@@ -60,21 +79,17 @@ body {
   .container {
     flex-direction: column;
   }
-
   .titulo {
     color: black;
     font-size: 20px;
   }
-
   a {
     display: block;
   }
-
   .links a {
     text-decoration: underline;
   }
 }
-
 /*CONTENIDO PRINCIPAL*/
 .titulo-galeria {
   text-decoration: underline;
@@ -136,39 +151,30 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 130px;
   }
-
   .galeria_item:nth-child(2) {
     grid-column-start: span 1;
   }
-
   .galeria_item:nth-child(10) {
     grid-column-start: span 1;
   }
-
   .galeria_item:nth-child(3) {
     grid-column-start: span 1;
   }
-
   .galeria_item:nth-child(4) {
     grid-row-start: span 1;
   }
-
   .galeria_item:nth-child(8) {
     grid-column-start: span 1;
   }
-
   .galeria_item:nth-child(11) {
     grid-row-start: span 1;
   }
-
   .galeria_item:nth-child(12) {
     grid-row-start: span 1;
   }
 }
-
 /*FOOTER*/
 .footer-container {
-
   background: linear-gradient(to right, black, rgb(87, 87, 87));
   width: 100%;
   height: 300px;
@@ -195,21 +201,15 @@ body {
     background-position: 0 0;
     width: 0;
   }
-
   50% {
     background-position: 100% 0;
     width: 100%;
   }
-
   100% {
     background-position: 0 0;
     width: 0;
   }
 }
-
-
-
-
 .footer {
   width: 50%;
   text-align: center;
@@ -241,11 +241,9 @@ body {
     display: flex;
     flex-direction: column;
   }
-
   .boton {
     font-size: 15px;
   }
-
   .footer {
     text-align: justify;
   }
@@ -260,6 +258,8 @@ body {
 .titulo-footer h2 {
   color: white;
   font-size: 40px;
+  padding-right: 300px;
+  
 }
 
 .redes-footer ul li {
@@ -278,6 +278,29 @@ body {
   cursor: pointer;
 }
 
+
+
+.img-wpp{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 35%;
+  right: 4%;
+  transition: ease 1s;
+  animation: efecto 1.2s infinite;
+  border-radius: 50%;
+}
+
+
+@keyframes efecto{
+  0%{
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+  }
+  100%{
+      box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
+}
+
 .boton-footer button:hover {
   background: red;
   color: white;
@@ -288,20 +311,21 @@ body {
   .titulo-footer h2 {
     font-size: 30px;
   }
-
   .footer-container {
     width: 100%;
   }
-
   .redes-footer ul li {
     font-size: 20px;
   }
-
   .boton-footer button {
     font-size: 20px;
   }
-}
 
+  .titulo-footer h2{
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+}
 /*Estilos Contacto*/
 /*HEADER*/
 .container {
@@ -353,21 +377,17 @@ body {
   .container {
     flex-direction: column;
   }
-
   .titulo {
     color: black;
     font-size: 20px;
   }
-
   a {
     display: block;
   }
-
   .links a {
     text-decoration: underline;
   }
 }
-
 /*Formulario Contacto*/
 .formulario {
   background-color: rgb(83, 83, 82);
@@ -389,7 +409,6 @@ body {
     margin: 300px auto 150px;
   }
 }
-
 /*FOOTER*/
 /*FOOTER*/
 .footer-container {
@@ -432,16 +451,18 @@ body {
     display: flex;
     flex-direction: column;
   }
-
   .boton {
     font-size: 15px;
   }
-
   .footer {
     text-align: justify;
   }
-}
 
+  .img-wpp{
+    position: absolute;
+  }
+  
+}
 .footer-container {
   display: flex;
   justify-content: space-around;
@@ -478,18 +499,16 @@ body {
   .titulo-footer h2 {
     font-size: 30px;
   }
-
   .footer-container {
     width: 100%;
   }
-
   .redes-footer ul li {
     font-size: 20px;
   }
-
   .boton-footer button {
     font-size: 20px;
   }
 }
+
 
 /*# sourceMappingURL=style.css.map */
