@@ -1,48 +1,43 @@
 @charset "UTF-8";
+
 /*Mapas y Variables*/
 
-$coloresPrincipales: (
-  borde:rgb(233, 192, 9),
-  fondoGris:rgb(83, 83, 82),
-  fondoBoton:red,
+$coloresPrincipales:(
+  borde: rgb(233, 192, 9),
+  fondoGris: rgb(83, 83, 82),
+  hoverLinks: rgb(233, 192, 9),
 );
-
-
-
-
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Castoro Titling', cursive;
+  font-family: "Castoro Titling", cursive;
 }
-body{
-  background-image: url('https://img.freepik.com/foto-gratis/marco-ingredientes-alimentarios-hornear-sobre-fondo-pastel-ligeramente-rosa-cocinar-plano-espacio-copia-vista-superior-concepto-horneado-endecha-plana_127032-2200.jpg?w=2000');
+
+body {
+  background-image: url("https://img.freepik.com/foto-gratis/marco-ingredientes-alimentarios-hornear-sobre-fondo-pastel-ligeramente-rosa-cocinar-plano-espacio-copia-vista-superior-concepto-horneado-endecha-plana_127032-2200.jpg?w=2000");
   object-fit: cover;
   background-size: cover;
-
 }
 
 
- /*background-color: rgb(206, 121, 90);*/
 /*Header*/
-
 .container {
-  border-bottom: 3px solid map-get($coloresPrincipales , borde );
-  background-color: rgb(83, 83, 82);
+  border-bottom: 3px solid map-get($coloresPrincipales, borde );
+  background-color: map-get($coloresPrincipales, fondoGris );
   display: flex;
   height: 180px;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .logo {
   width: 130px;
   height: 130px;
   margin: 35px;
+  border-radius: 10%;
 }
 
 .nav-menu {
@@ -55,23 +50,23 @@ body{
 
 .links a {
   border-radius: 20px;
-  color: wheat;
+  color: rgb(196, 129, 6);
   font-size: 25px;
-  padding: 10px 25px;
+  padding: 5px 25px;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.links a:hover {
-  background-color: rgb(233, 192, 9);
   transition: 0.8s;
 }
 
-.titulo-principal {
+.links a:hover {
+  background-color: map-get($coloresPrincipales, hoverLinks );
   
+}
+
+.titulo h1 {
+  text-decoration: underline;
   color: white;
   font-size: 60px;
-  
 }
 
 /*Responsive header*/
@@ -112,13 +107,14 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 3px solid rgb(233, 192, 9);
+  border: 3px solid map-get($coloresPrincipales , borde );
   border-radius: 10px;
+  transition: all 2s;
 }
 
 .imagen:hover {
   transform: scale(1.2);
-  transition: all 3s;
+  
 }
 
 /*ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS*/
@@ -184,6 +180,7 @@ body{
   position: relative;
 }
 
+/*ANIMACION DEL BORDE FOOTER*/
 .footer-container::before {
   content: "";
   position: absolute;
@@ -210,44 +207,15 @@ body{
     width: 0;
   }
 }
+
+
 .footer {
-  width: 50%;
   text-align: center;
   margin: auto 0;
   font-size: 20px;
 }
 
-.boton-inicio {
-  margin: auto auto;
-}
 
-.boton {
-  font-size: 40px;
-  border-radius: 40px;
-  padding: 25px;
-  background: red;
-  cursor: pointer;
-  color: white;
-}
-
-.boton:hover {
-  background: white;
-  color: red;
-  transition: 0.6s;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .boton {
-    font-size: 15px;
-  }
-  .footer {
-    text-align: justify;
-  }
-}
 
 .footer-container {
   display: flex;
@@ -259,7 +227,6 @@ body{
   color: white;
   font-size: 40px;
   padding-right: 300px;
-  
 }
 
 .redes-footer ul li {
@@ -269,18 +236,23 @@ body{
 }
 
 .boton-footer button {
-  box-shadow: 20px 10px 30px black;
+  box-shadow: 30px 10px 30px black;
   font-size: 40px;
   border-radius: 20px;
   padding: 15px 25px;
   background: white;
   color: red;
   cursor: pointer;
+  transition: 0.9s;
 }
 
 
+.boton-footer button:hover {
+  background: red;
+  color: white;
+}
 
-.img-wpp{
+.img-wpp {
   width: 60px;
   height: 60px;
   position: fixed;
@@ -291,116 +263,32 @@ body{
   border-radius: 50%;
 }
 
-
-@keyframes efecto{
-  0%{
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+@keyframes efecto {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
   }
-  100%{
-      box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
-  }
-}
-
-.boton-footer button:hover {
-  background: red;
-  color: white;
-  transition: 0.7s;
-}
-
-@media (max-width: 768px) {
-  .titulo-footer h2 {
-    font-size: 30px;
-  }
-  .footer-container {
-    width: 100%;
-  }
-  .redes-footer ul li {
-    font-size: 20px;
-  }
-  .boton-footer button {
-    font-size: 20px;
-  }
-
-  .titulo-footer h2{
-    padding-right: 0;
-    padding-bottom: 10px;
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
   }
 }
-/*Estilos Contacto*/
-/*HEADER*/
-.container {
-  width: 100%;
-  border-bottom: 3px solid rgb(233, 192, 9);
-  background-color: rgb(83, 83, 82);
-  display: flex;
-  height: 180px;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.logo {
-  width: 130px;
-  height: 130px;
-  margin: 35px;
-}
 
-.nav-menu {
-  margin: 25px;
-}
 
-.nav-menu ul {
-  list-style: none;
-}
 
-.links a {
-  border-radius: 20px;
-  color: wheat;
-  font-size: 25px;
-  padding: 10px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
-.links a:hover {
-  background-color: rgb(233, 192, 9);
-  transition: 0.8s;
-}
-
-.titulo {
-  text-decoration: underline;
-  color: white;
-  font-size: 50px;
-}
-
-/*Responsive header*/
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .titulo {
-    color: black;
-    font-size: 20px;
-  }
-  a {
-    display: block;
-  }
-  .links a {
-    text-decoration: underline;
-  }
-}
 /*Formulario Contacto*/
 .formulario {
-  background-color: rgb(83, 83, 82);
+  background-color: map-get($coloresPrincipales , fondoGris );
   color: white;
   border-radius: 15px;
   margin: 100px auto;
   width: 60%;
   text-transform: uppercase;
-  border: 3px solid rgb(233, 192, 9);
+  border: 3px solid map-get($coloresPrincipales , borde );
   padding: 30px;
 }
 
-/*Media querie formulario*/
+/*Media query formulario*/
 @media (max-width: 768px) {
   .formulario {
     display: block;
@@ -409,43 +297,9 @@ body{
     margin: 300px auto 150px;
   }
 }
-/*FOOTER*/
-/*FOOTER*/
-.footer-container {
-  background: linear-gradient(to right, black, rgb(87, 87, 87));
-  width: 100%;
-  height: 300px;
-  margin-top: 100px;
-  color: white;
-  display: flex;
-}
 
-.footer {
-  width: 100%;
-  text-align: center;
-  margin: auto 0;
-  font-size: 20px;
-}
 
-.boton-inicio {
-  margin: auto auto;
-}
-
-.boton {
-  font-size: 40px;
-  border-radius: 40px;
-  padding: 25px;
-  background: red;
-  cursor: pointer;
-  color: white;
-}
-
-.boton:hover {
-  background: white;
-  color: red;
-  transition: 0.6s;
-}
-
+/*Media query footer con icono del whatsapp */
 @media (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -457,58 +311,30 @@ body{
   .footer {
     text-align: justify;
   }
-
-  .img-wpp{
+  .img-wpp {
     position: absolute;
-  }
-  
 }
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.titulo-footer h2 {
-  color: white;
-  font-size: 40px;
-}
-
-.redes-footer ul li {
-  font-size: 40px;
-  list-style: none;
-  padding: 5px;
-}
-
-.boton-footer button {
-  font-size: 40px;
-  border-radius: 20px;
-  padding: 15px 25px;
-  background: white;
-  color: red;
-  cursor: pointer;
-}
-
-.boton-footer button:hover {
-  background: red;
-  color: white;
-  transition: 0.7s;
-}
-
-@media (max-width: 768px) {
   .titulo-footer h2 {
     font-size: 30px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    
   }
   .footer-container {
     width: 100%;
   }
   .redes-footer ul li {
     font-size: 20px;
+    margin-left: 10px;
   }
   .boton-footer button {
     font-size: 20px;
   }
+  .boton-footer{
+    margin: 0 0 20px 40px;
+  }
 }
+
 
 
 /*# sourceMappingURL=style.css.map */

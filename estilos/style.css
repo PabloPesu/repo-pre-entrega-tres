@@ -13,7 +13,6 @@ body {
   background-size: cover;
 }
 
-/*background-color: rgb(206, 121, 90);*/
 /*Header*/
 .container {
   border-bottom: 3px solid rgb(233, 192, 9);
@@ -28,6 +27,7 @@ body {
   width: 130px;
   height: 130px;
   margin: 35px;
+  border-radius: 10%;
 }
 
 .nav-menu {
@@ -40,16 +40,16 @@ body {
 
 .links a {
   border-radius: 20px;
-  color: wheat;
+  color: rgb(196, 129, 6);
   font-size: 25px;
-  padding: 10px 25px;
+  padding: 5px 25px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.8s;
 }
 
 .links a:hover {
   background-color: rgb(233, 192, 9);
-  transition: 0.8s;
 }
 
 .titulo h1 {
@@ -98,11 +98,11 @@ body {
   object-fit: cover;
   border: 3px solid rgb(233, 192, 9);
   border-radius: 10px;
+  transition: all 2s;
 }
 
 .imagen:hover {
   transform: scale(1.2);
-  transition: all 3s;
 }
 
 /*ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS*/
@@ -168,6 +168,7 @@ body {
   position: relative;
 }
 
+/*ANIMACION DEL BORDE FOOTER*/
 .footer-container::before {
   content: "";
   position: absolute;
@@ -195,43 +196,11 @@ body {
   }
 }
 .footer {
-  width: 50%;
   text-align: center;
   margin: auto 0;
   font-size: 20px;
 }
 
-.boton-inicio {
-  margin: auto auto;
-}
-
-.boton {
-  font-size: 40px;
-  border-radius: 40px;
-  padding: 25px;
-  background: red;
-  cursor: pointer;
-  color: white;
-}
-
-.boton:hover {
-  background: white;
-  color: red;
-  transition: 0.6s;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .boton {
-    font-size: 15px;
-  }
-  .footer {
-    text-align: justify;
-  }
-}
 .footer-container {
   display: flex;
   justify-content: space-around;
@@ -251,13 +220,19 @@ body {
 }
 
 .boton-footer button {
-  box-shadow: 20px 10px 30px black;
+  box-shadow: 30px 10px 30px black;
   font-size: 40px;
   border-radius: 20px;
   padding: 15px 25px;
   background: white;
   color: red;
   cursor: pointer;
+  transition: 0.9s;
+}
+
+.boton-footer button:hover {
+  background: red;
+  color: white;
 }
 
 .img-wpp {
@@ -279,50 +254,6 @@ body {
     box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
   }
 }
-.boton-footer button:hover {
-  background: red;
-  color: white;
-  transition: 0.7s;
-}
-
-@media (max-width: 768px) {
-  .titulo-footer h2 {
-    font-size: 30px;
-  }
-  .footer-container {
-    width: 100%;
-  }
-  .redes-footer ul li {
-    font-size: 20px;
-  }
-  .boton-footer button {
-    font-size: 20px;
-  }
-  .titulo-footer h2 {
-    padding-right: 0;
-    padding-bottom: 10px;
-  }
-}
-
-
-
-
-/*Responsive header*/
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .titulo {
-    color: black;
-    font-size: 20px;
-  }
-  a {
-    display: block;
-  }
-  .links a {
-    text-decoration: underline;
-  }
-}
 /*Formulario Contacto*/
 .formulario {
   background-color: rgb(83, 83, 82);
@@ -335,7 +266,7 @@ body {
   padding: 30px;
 }
 
-/*Media querie formulario*/
+/*Media query formulario*/
 @media (max-width: 768px) {
   .formulario {
     display: block;
@@ -344,9 +275,7 @@ body {
     margin: 300px auto 150px;
   }
 }
-
-
-
+/*Media query footer con icono del whatsapp */
 @media (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -360,83 +289,24 @@ body {
   }
   .img-wpp {
     position: absolute;
-}
-}
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.titulo-footer h2 {
-  color: white;
-  font-size: 40px;
-}
-
-.redes-footer ul li {
-  font-size: 40px;
-  list-style: none;
-  padding: 5px;
-}
-
-.boton-footer button {
-  font-size: 40px;
-  border-radius: 20px;
-  padding: 15px 25px;
-  background: white;
-  color: red;
-  cursor: pointer;
-}
-
-.boton-footer button:hover {
-  background: red;
-  color: white;
-  transition: 0.7s;
   }
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.titulo-footer h2 {
-  color: white;
-  font-size: 40px;
-}
-
-.redes-footer ul li {
-  font-size: 40px;
-  list-style: none;
-  padding: 5px;
-}
-
-.boton-footer button {
-  font-size: 40px;
-  border-radius: 20px;
-  padding: 15px 25px;
-  background: white;
-  color: red;
-  cursor: pointer;
-}
-
-.boton-footer button:hover {
-  background: red;
-  color: white;
-  transition: 0.7s;
-}
-
-@media (max-width: 768px) {
   .titulo-footer h2 {
     font-size: 30px;
+    padding-right: 0;
+    padding-bottom: 10px;
   }
   .footer-container {
     width: 100%;
   }
   .redes-footer ul li {
     font-size: 20px;
+    margin-left: 10px;
   }
   .boton-footer button {
     font-size: 20px;
+  }
+  .boton-footer {
+    margin: 0 0 20px 40px;
   }
 }
 
