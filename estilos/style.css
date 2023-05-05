@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-/*Header*/
+/****Header***/
 .container {
   border-bottom: 3px solid rgb(233, 192, 9);
   background-color: rgb(83, 83, 82);
@@ -36,6 +36,7 @@ body {
 
 .nav-menu ul {
   list-style: none;
+  padding-right: 50px;
 }
 
 .links a {
@@ -58,7 +59,7 @@ body {
   font-size: 60px;
 }
 
-/*Responsive header*/
+/****Responsive header***/
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -74,7 +75,7 @@ body {
     text-decoration: underline;
   }
 }
-/*CONTENIDO PRINCIPAL*/
+/****CONTENIDO PRINCIPAL****/
 .titulo-galeria {
   text-decoration: underline;
   text-align: center;
@@ -105,7 +106,7 @@ body {
   transform: scale(1.2);
 }
 
-/*ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS*/
+/****ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS****/
 .galeria_item:nth-child(10) {
   grid-column-start: span 2;
 }
@@ -156,8 +157,11 @@ body {
   .galeria_item:nth-child(12) {
     grid-row-start: span 1;
   }
+  .imagen:hover {
+    transform: scale(1.5);
+  }
 }
-/*FOOTER*/
+/****FOOTER****/
 .footer-container {
   background: linear-gradient(to right, black, rgb(87, 87, 87));
   width: 100%;
@@ -168,7 +172,7 @@ body {
   position: relative;
 }
 
-/*ANIMACION DEL BORDE FOOTER*/
+/***ANIMACION DEL BORDE FOOTER****/
 .footer-container::before {
   content: "";
   position: absolute;
@@ -254,7 +258,7 @@ body {
     box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
   }
 }
-/*Formulario Contacto*/
+/****Formulario Contacto****/
 .formulario {
   background-color: rgb(83, 83, 82);
   color: white;
@@ -266,7 +270,7 @@ body {
   padding: 30px;
 }
 
-/*Media query formulario*/
+/****Media query formulario****/
 @media (max-width: 768px) {
   .formulario {
     display: block;
@@ -275,7 +279,7 @@ body {
     margin: 300px auto 150px;
   }
 }
-/*Media query footer con icono del whatsapp */
+/****Media query footer con icono del whatsapp ****/
 @media (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -309,6 +313,145 @@ body {
     margin: 0 0 20px 40px;
   }
 }
+/*****Estilos Sobre nosotros*****/
+.contenedor-principal {
+  height: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+}
+
+.contenedor-titulo-parrafo {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  padding-top: 240px;
+}
+
+.titulo-video {
+  padding: 0 50px 100px 0;
+  font-size: 30px;
+  color: rgb(228, 152, 11);
+}
+
+.parrafo-video {
+  font-size: 25px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contenedor-titulo-parrafo {
+    display: block;
+    padding: 20px 0;
+  }
+  video {
+    height: 100%;
+    background-size: cover;
+  }
+  .capa {
+    height: 100%;
+  }
+  .titulo h1 {
+    font-size: 40px;
+  }
+  .titulo-video h1 {
+    display: none;
+  }
+  .parrafo-video p{
+    font-size: 1.3rem;
+    padding: 80px 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .links {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 200;
+  }
+}
+
+.nav-menu input[type="checkbox"], .nav-menu .fa-bars, .nav-menu .fa-times {
+  transition: all 1s;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  
+}
+
+.nav-menu .fa-bars, .nav-menu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.nav-menu input[type="checkbox"] {
+  opacity: 0;
+  
+}
+
+.nav-menu {
+  color: white;
+  position: relative;
+  min-height: 48px;
+  
+}
+
+.nav-menu nav {
+  display: none;
+  
+}
+
+.nav-menu input:checked ~ nav {
+  display: block;
+  
+}
+
+.nav-menu input:checked ~ .fa-bars {
+  display: none;
+  
+}
+
+.nav-menu input:not(:checked) ~ .fa-times {
+  display: none;
+  
+}
 
 
+@media (max-width: 768px){
+  .nav-menu input[type="checkbox"], .nav-menu .fa-bars, .nav-menu .fa-times{
+    display: block;
+    margin-right: 50px;
+    z-index: 500;
+  }
+
+
+}
+ 
 /*# sourceMappingURL=style.css.map */

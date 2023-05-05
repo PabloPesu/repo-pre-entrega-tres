@@ -23,7 +23,8 @@ body {
 }
 
 
-/*Header*/
+/****Header***/
+
 .container {
   border-bottom: 3px solid map-get($coloresPrincipales, borde );
   background-color: map-get($coloresPrincipales, fondoGris );
@@ -69,7 +70,9 @@ body {
   font-size: 60px;
 }
 
-/*Responsive header*/
+
+/****Responsive header***/
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -85,7 +88,9 @@ body {
     text-decoration: underline;
   }
 }
-/*CONTENIDO PRINCIPAL*/
+
+/****CONTENIDO PRINCIPAL****/
+
 .titulo-galeria {
   text-decoration: underline;
   text-align: center;
@@ -117,7 +122,9 @@ body {
   
 }
 
-/*ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS*/
+/****ACOMODANDO ALGUNAS IMAGENES CON DISTINTOS TAMAÑOS****/
+
+
 .galeria_item:nth-child(10) {
   grid-column-start: span 2;
 }
@@ -169,7 +176,9 @@ body {
     grid-row-start: span 1;
   }
 }
-/*FOOTER*/
+
+/****FOOTER****/
+
 .footer-container {
   background: linear-gradient(to right, black, rgb(87, 87, 87));
   width: 100%;
@@ -180,7 +189,8 @@ body {
   position: relative;
 }
 
-/*ANIMACION DEL BORDE FOOTER*/
+/***ANIMACION DEL BORDE FOOTER****/
+
 .footer-container::before {
   content: "";
   position: absolute;
@@ -276,7 +286,8 @@ body {
 
 
 
-/*Formulario Contacto*/
+/****Formulario Contacto****/
+
 .formulario {
   background-color: map-get($coloresPrincipales , fondoGris );
   color: white;
@@ -288,7 +299,8 @@ body {
   padding: 30px;
 }
 
-/*Media query formulario*/
+/****Media query formulario****/
+
 @media (max-width: 768px) {
   .formulario {
     display: block;
@@ -299,7 +311,9 @@ body {
 }
 
 
-/*Media query footer con icono del whatsapp */
+/****Media query footer con icono del whatsapp ****/
+
+
 @media (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -337,4 +351,90 @@ body {
 
 
 
+/*****Estilos Sobre nosotros*****/
+.contenedor-principal {
+  height: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+}
+
+.contenedor-titulo-parrafo {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  padding-top: 240px;
+}
+
+.titulo-video {
+  padding: 0 50px 100px 0;
+  font-size: 30px;
+  color: rgb(228, 152, 11);
+}
+
+.parrafo-video {
+  font-size: 25px;
+  color: white;
+}
+
+
+
+@media (max-width: 768px) {
+  .contenedor-titulo-parrafo {
+    display: block;
+    padding: 20px 0;
+    
+  }
+  video {
+    height: 100%;
+    background-size: cover;
+  }
+  .capa {
+    height: 100%;
+  }
+  .titulo h1 {
+    font-size: 30px;
+  }
+  .titulo-video h1{
+    display: none; 
+  }
+
+  .parrafo-video {
+    font-size: 1.2rem;
+    padding-top: 210px;
+  }
+  .links {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 200;
+  }
+}
+
+
 /*# sourceMappingURL=style.css.map */
+
+
+
+

@@ -14,15 +14,15 @@
     <meta property="og:image" content="https://www.mendoza.gov.ar/wp-content/uploads/sites/49/2019/10/DOLCE-LUC%C3%8DA-17.jpg"> <!--Logo q sale en la preview-->
     <meta property="og:url" content="imagenestortas/logo.jpeg">
 
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style.css">
 
 </head>
 
 <body>
     <!--HEADER-->
-    <header class="container">
+    <header class="container header-container">
         <div >
-            <a href="#"><img class="logo" src="imagenestortas/logo.jpeg" alt=""></a>
+            <a href="#"><img class="logo" src="../imagenestortas/logo.jpeg" alt=""></a>
         </div>
            
 
@@ -35,14 +35,13 @@
             <input type="checkbox">
             <i class="fas fa-bars"></i>
             <i class="fas fa-times"></i>
-
-
+           
             <nav>
                 <ul>
                     <li class="links">
-                        <a id="inicio" href="#">Home</a>
-                        <a id="nosotros" href="pages/index-nosotros.html">Nosotros</a>
-                        <a id="concato" href="pages/index-contacto.html">Contacto</a>
+                        <a id="inicio" href="../index.html">Home</a>
+                        <a href="#">Nosotros</a>
+                        <a id="concato" href="../pages/index-contacto.html">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -50,56 +49,30 @@
     </header>
 
 
-    <!--CONTENIDO PRINCIPAL-->
 
-     <h2 class="titulo-galeria">Galeria de imágenes</h2>
 
-    <div class="menu-container">
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen1.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen2.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen3.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen4.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen5.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen6.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen7.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen8.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen9.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen10.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen11.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen12.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen13.jpeg" alt="" class="imagen">
-        </div>
-        <div class="galeria_item">
-            <img src="imagenestortas/imagen14.jpeg" alt="" class="imagen">
-        </div>
+    <main class="contenedor-principal">
+        <div class="contenedor-titulo-parrafo">
+            <div class="titulo-video">
+                <h1>Bienvenidos a Tortas Annie...</h1>
+            </div>
+
+            <div class="parrafo-video">
+                <p>
+                     Elaboramos y comercializamos productos de pastelería y servicios de catering de calidad, con la tradición del sabor artesanal a fin de satisfacer a nuestros clientes, garantizando con el uso de materia prima de excelente calidad, con esfuerzo para brindar nuestro mejor servicio.
+                </p>
+            </div>
     </div>
+        <video muted loop autoplay>
+            <source src="../imagenestortas/videotorta.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </main>
 
-    
+
+
+
+
     <!--FOOTER-->
 
     <footer class="footer-container">
